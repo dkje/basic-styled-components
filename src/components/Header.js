@@ -1,27 +1,7 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styledComponents from "../styles/Header-style";
 
-const ThemeSwitchBtn = styled.button`
-  ${({ theme }) => {
-    return css`
-      background-color: ${theme.colors.primary};
-      color: ${theme.colors.secondary};
-      font-size: ${theme.fonts.size.base};
-      border-radius: 2px;
-    `;
-  }}
-`;
-
-const CustomHeader = styled.div`
-  ${({ theme }) => {
-    return css`
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      background-color: ${theme.colors.secondary};
-    `;
-  }}
-`;
+const { CustomHeader, ThemeSwitchBtn } = styledComponents;
 
 const Header = ({ switchTheme }) => {
   return (
